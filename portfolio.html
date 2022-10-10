@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+<h1>Data Science Portfolio.</h1>
+<a href="index.html" id="linkhome">Home</a>
+
+<body>
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+    <div class="myWeek1">
+        
+        <h1>Week 1</h1>
+        <h3>Inflation</h3>
+        <p>The first chart tracks Inflation in the UK from 1988.</p>
+        <div class="chart" id="Chart1"></div>
+
+        <h3>Football</h3>
+        <p>My second chart looks at whether home teams have an advantage in the premier league
+        </p>
+        <div class="chart" id="Chart2"> </div>
+    </div> 
+</body>
+
+
+<script>
+    //Define charts:
+    var myChart1 = "chartINF1_dark.json";
+    var myChart2 = "chartFootball1.json";
+    var myChart3 = "IMFoutstanding.json";
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3); 
+</script>
+
+<body>
+    <div class="myWeek2">
+        <h1> Week 2</h1>
+        <h3>IMF oustanding</h3>
+        <p>this chart does ... </p>
+        <div class="chart" id="Chart3"> </div>
+
+    </div>
+
+
+</body>
+</html>
+
+
