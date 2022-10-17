@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>DataScience | Portfolio</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+
+<body>
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+   <header class="main-header">
+    <nav class="nav main-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li> <!--List Items (can only be used in ol (ordered list) or ul)-->
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="project.html">PROJECT</a></li>
+        </ul>
+    </nav>
+    <h1 class="band-name band-name-large">DataScience Portfolio</h1>
+   </header>
+   <section class="charts">
+    <h1 class="Week">Week 1</h1>
+    <h3>Inflation</h3>
+    <p>The first chart tracks Inflation in the UK from 1988.</p>
+    <div class="align">
+
+    <div class="chart1" id="Chart1"></div>
+    </div>
+
+    <h3>Football</h3>
+    <p>My second chart looks at whether home teams have an advantage in the premier league
+    </p>
+    <div class="align"> 
+    <div class="chart2" id="Chart2"></div>
+    </div>
+   </section>
+   <section class="charts">
+    
+        <h1 class="Week"> Week 2</h1>
+        <h3>IMF oustanding</h3>
+        <p>this chart does ... </p>
+        <div class="align">
+            <div class="chart3" id="Chart3"> </div>
+        </div>
+
+    
+
+
+</section>
+
+
+</body>
+
+
+<script>
+    //Define charts:
+    var myChart1 = "charts/chartINF1_dark.json";
+    var myChart2 = "charts/chartFootball1.json";
+    var myChart3 = "charts/IMFoutstanding.json";
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3); 
+</script>
+
+<footer class="portfolio-footer">
+    <div class="container portfolio-footer-container">
+    <h3 class="Links">Links</h3>
+    <ul class="nav footer-nav">
+        <li>
+            <a href="https://www.instagram.com/summer_in_london_/?next=%2F" target="_blank">
+                <img src="images/insta.png" width="50" height="">
+            </a>
+        </li>
+    </ul>
+    </div>
+</footer>
+</html>
