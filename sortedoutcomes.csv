@@ -1,0 +1,41 @@
+country,group,value,sort_index
+Denmark,hcgdp2019,9.955831,0
+Denmark,educgdp2020,6.38,0
+Denmark,fdigdp2021,3.692662,0
+Denmark,dominvest,21.47,0
+Finland,hcgdp2019,9.153483,1
+Finland,educgdp2020,5.88,1
+Finland,fdigdp2021,5.515241,1
+Finland,dominvest,24.8,1
+Norway,dominvest,17.33,2
+Norway,hcgdp2019,10.52135,2
+Norway,fdigdp2021,2.218447,2
+Norway,educgdp2020,5.9,2
+Sweden,hcgdp2019,10.86749,3
+Sweden,dominvest,26.47,3
+Sweden,educgdp2020,7.17,3
+Sweden,fdigdp2021,9.175345,3
+United Kingdom,fdigdp2021,0.7218616,4
+United Kingdom,educgdp2020,5.53,4
+United Kingdom,hcgdp2019,10.15403,4
+United Kingdom,dominvest,17.91,4
+Greece,dominvest,12.29,5
+Greece,hcgdp2019,7.837886,5
+Greece,fdigdp2021,2.78687,5
+Greece,educgdp2020,4.44,5
+Bulgaria,hcgdp2019,7.126114,6
+Bulgaria,educgdp2020,4.04,6
+Bulgaria,dominvest,14.17,6
+Bulgaria,fdigdp2021,2.517598,6
+Turkey,fdigdp2021,1.690037,7
+Turkey,dominvest,27.72,7
+Turkey,educgdp2020,3.36,7
+Turkey,hcgdp2019,4.344098,7
+Ukraine,fdigdp2021,3.658935,8
+Ukraine,educgdp2020,5.38232,8
+Ukraine,dominvest,14.84,8
+Ukraine,hcgdp2019,7.098602,8
+Russia,educgdp2020,3.73,9
+Russia,dominvest,26.56,9
+Russia,hcgdp2019,5.648491,9
+Russia,fdigdp2021,2.274027,9
