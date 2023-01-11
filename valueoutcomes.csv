@@ -1,0 +1,41 @@
+country,group,value,sort_index,legendTitle,valuehc,valueeduc,valuedom,valuefdi
+"Denmark","hcgdp2019",9.955831,0,"Healthcare % GDP",9.955831,,,
+"Denmark","educgdp2020",6.38,0,"Education % GDP",,6.38,,
+"Denmark","fdigdp2021",3.692662,0,"Net Inflows Foreign Direct Investment % GDP",,,,3.692662
+"Denmark","dominvest",21.47,0,"Domestic Investment % GDP",,,21.47,
+"Finland","hcgdp2019",9.153483,1,"Healthcare % GDP",9.153483,,,
+"Finland","educgdp2020",5.88,1,"Education % GDP",,5.88,,
+"Finland","fdigdp2021",5.515241,1,"Net Inflows Foreign Direct Investment % GDP",,,,5.515241
+"Finland","dominvest",24.8,1,"Domestic Investment % GDP",,,24.8,
+"Norway","dominvest",17.33,2,"Domestic Investment % GDP",,,17.33,
+"Norway","hcgdp2019",10.52135,2,"Healthcare % GDP",10.52135,,,
+"Norway","fdigdp2021",2.218447,2,"Net Inflows Foreign Direct Investment % GDP",,,,2.218447
+"Norway","educgdp2020",5.9,2,"Education % GDP",,5.9,,
+"Sweden","hcgdp2019",10.86749,3,"Healthcare % GDP",10.86749,,,
+"Sweden","dominvest",26.47,3,"Domestic Investment % GDP",,,26.47,
+"Sweden","educgdp2020",7.17,3,"Education % GDP",,7.17,,
+"Sweden","fdigdp2021",9.175345,3,"Net Inflows Foreign Direct Investment % GDP",,,,9.175345
+"United Kingdom","fdigdp2021",.7218616,4,"Net Inflows Foreign Direct Investment % GDP",,,,.7218616
+"United Kingdom","educgdp2020",5.53,4,"Education % GDP",,5.53,,
+"United Kingdom","hcgdp2019",10.15403,4,"Healthcare % GDP",10.15403,,,
+"United Kingdom","dominvest",17.91,4,"Domestic Investment % GDP",,,17.91,
+"Greece","dominvest",12.29,5,"Domestic Investment % GDP",,,12.29,
+"Greece","hcgdp2019",7.837886,5,"Healthcare % GDP",7.837886,,,
+"Greece","fdigdp2021",2.78687,5,"Net Inflows Foreign Direct Investment % GDP",,,,2.78687
+"Greece","educgdp2020",4.44,5,"Education % GDP",,4.44,,
+"Bulgaria","hcgdp2019",7.126114,6,"Healthcare % GDP",7.126114,,,
+"Bulgaria","educgdp2020",4.04,6,"Education % GDP",,4.04,,
+"Bulgaria","dominvest",14.17,6,"Domestic Investment % GDP",,,14.17,
+"Bulgaria","fdigdp2021",2.517598,6,"Net Inflows Foreign Direct Investment % GDP",,,,2.517598
+"Turkey","fdigdp2021",1.690037,7,"Net Inflows Foreign Direct Investment % GDP",,,,1.690037
+"Turkey","dominvest",27.72,7,"Domestic Investment % GDP",,,27.72,
+"Turkey","educgdp2020",3.36,7,"Education % GDP",,3.36,,
+"Turkey","hcgdp2019",4.344098,7,"Healthcare % GDP",4.344098,,,
+"Ukraine","fdigdp2021",3.658935,8,"Net Inflows Foreign Direct Investment % GDP",,,,3.658935
+"Ukraine","educgdp2020",5.38232,8,"Education % GDP",,5.38232,,
+"Ukraine","dominvest",14.84,8,"Domestic Investment % GDP",,,14.84,
+"Ukraine","hcgdp2019",7.098602,8,"Healthcare % GDP",7.098602,,,
+"Russia","educgdp2020",3.73,9,"Education % GDP",,3.73,,
+"Russia","dominvest",26.56,9,"Domestic Investment % GDP",,,26.56,
+"Russia","hcgdp2019",5.648491,9,"Healthcare % GDP",5.648491,,,
+"Russia","fdigdp2021",2.274027,9,"Net Inflows Foreign Direct Investment % GDP",,,,2.274027
