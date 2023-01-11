@@ -1,0 +1,182 @@
+﻿country,ISO3,Region,CPI,Rank
+Denmark,DNK,WE/EU,88,1
+New Zealand,NZL,AP,88,1
+Finland,FIN,WE/EU,88,1
+Singapore,SGP,AP,85,4
+Sweden,SWE,WE/EU,85,4
+Norway,NOR,WE/EU,85,4
+Switzerland,CHE,WE/EU,84,7
+Netherlands,NLD,WE/EU,82,8
+Luxembourg,LUX,WE/EU,81,9
+Germany,DEU,WE/EU,80,10
+United Kingdom,GBR,WE/EU,78,11
+Hong Kong,HKG,AP,76,12
+Canada,CAN,AME,74,13
+Austria,AUT,WE/EU,74,13
+Estonia,EST,WE/EU,74,13
+Iceland,ISL,WE/EU,74,13
+Ireland,IRL,WE/EU,74,13
+Australia,AUS,AP,73,18
+Belgium,BEL,WE/EU,73,18
+Japan,JPN,AP,73,18
+Uruguay,URY,AME,73,18
+France,FRA,WE/EU,71,22
+Seychelles,SYC,SSA,70,23
+United Arab Emirates,ARE,MENA,69,24
+Bhutan,BTN,AP,68,25
+Taiwan,TWN,AP,68,25
+Chile,CHL,AME,67,27
+United States of America,USA,AME,67,27
+Barbados,BRB,AME,65,29
+Bahamas,BHS,AME,64,30
+Qatar,QAT,MENA,63,31
+"Korea, South",KOR,AP,62,32
+Portugal,PRT,WE/EU,62,32
+Spain,ESP,WE/EU,61,34
+Lithuania,LTU,WE/EU,61,34
+Israel,ISR,MENA,59,36
+St. Vincent and the Grenadines,VCT,AME,59,36
+Latvia,LVA,WE/EU,59,36
+Cabo Verde,CPV,SSA,58,39
+Costa Rica,CRI,AME,58,39
+Slovenia,SVN,WE/EU,57,41
+Poland,POL,WE/EU,56,42
+St. Lucia,LCA,AME,56,42
+Italy,ITA,WE/EU,56,42
+Fiji,FJI,AP,55,45
+Botswana,BWA,SSA,55,45
+Georgia,GEO,ECA,55,45
+Dominica,DMA,AME,55,45
+Czech Republic,CZE,WE/EU,54,49
+Malta,MLT,WE/EU,54,49
+Mauritius,MUS,SSA,54,49
+Cyprus,CYP,WE/EU,53,52
+Rwanda,RWA,SSA,53,52
+Grenada,GRD,AME,53,52
+Saudi Arabia,SAU,MENA,53,52
+Oman,OMN,MENA,52,56
+Slovakia,SVK,WE/EU,52,56
+Namibia,NAM,SSA,49,58
+Greece,GRC,WE/EU,49,58
+Armenia,ARM,ECA,49,58
+Jordan,JOR,MENA,49,58
+Malaysia,MYS,AP,48,62
+Croatia,HRV,WE/EU,47,63
+Cuba,CUB,AME,46,64
+Montenegro,MNE,ECA,46,64
+Sao Tome and Principe,STP,SSA,45,66
+Romania,ROU,WE/EU,45,66
+Vanuatu,VUT,AP,45,66
+China,CHN,AP,45,66
+Jamaica,JAM,AME,44,70
+South Africa,ZAF,SSA,44,70
+Tunisia,TUN,MENA,44,70
+Senegal,SEN,SSA,43,73
+Hungary,HUN,WE/EU,43,73
+Ghana,GHA,SSA,43,73
+Kuwait,KWT,MENA,43,73
+Solomon Islands,SLB,AP,43,73
+Bulgaria,BGR,WE/EU,42,78
+Bahrain,BHR,MENA,42,78
+Benin,BEN,SSA,42,78
+Burkina Faso,BFA,SSA,42,78
+Belarus,BLR,ECA,41,82
+Timor-Leste,TLS,AP,41,82
+Trinidad and Tobago,TTO,AME,41,82
+Maldives,MDV,AP,40,85
+India,IND,AP,40,85
+Guyana,GUY,AME,39,87
+Morocco,MAR,MENA,39,87
+Colombia,COL,AME,39,87
+Ethiopia,ETH,SSA,39,87
+Suriname,SUR,AME,39,87
+Tanzania,TZA,SSA,39,87
+Kosovo,KSV,ECA,39,87
+Vietnam,VNM,AP,39,87
+North Macedonia,MKD,ECA,39,87
+Argentina,ARG,AME,38,96
+Lesotho,LSO,SSA,38,96
+Turkey,TUR,ECA,38,96
+Brazil,BRA,AME,38,96
+Serbia,SRB,ECA,38,96
+Indonesia,IDN,AP,38,96
+Kazakhstan,KAZ,ECA,37,102
+Sri Lanka,LKA,AP,37,102
+Gambia,GMB,SSA,37,102
+Ecuador,ECU,AME,36,105
+Peru,PER,AME,36,105
+Ivory Coast,CIV,SSA,36,105
+Panama,PAN,AME,36,105
+Moldova,MDA,ECA,36,105
+Albania,ALB,ECA,35,110
+Thailand,THA,AP,35,110
+Bosnia and Herzegovina,BIH,ECA,35,110
+Mongolia,MNG,AP,35,110
+Malawi,MWI,SSA,35,110
+El Salvador,SLV,AME,34,115
+Sierra Leone,SLE,SSA,34,115
+Algeria,DZA,MENA,33,117
+Philippines,PHL,AP,33,117
+Egypt,EGY,MENA,33,117
+Nepal,NPL,AP,33,117
+Zambia,ZMB,SSA,33,117
+Eswatini,SWZ,SSA,32,122
+Ukraine,UKR,ECA,32,122
+Niger,NER,SSA,31,124
+Mexico,MEX,AME,31,124
+Gabon,GAB,SSA,31,124
+Papua New Guinea,PNG,AP,31,124
+Bolivia,BOL,AME,30,128
+Kenya,KEN,SSA,30,128
+Azerbaijan,AZE,ECA,30,128
+Laos,LAO,AP,30,128
+Togo,TGO,SSA,30,128
+Dominican Republic,DOM,AME,30,128
+Paraguay,PRY,AME,30,128
+Djibouti,DJI,SSA,30,128
+Mali,MLI,SSA,29,136
+Russia,RUS,ECA,29,136
+Liberia,LBR,SSA,29,136
+Angola,AGO,SSA,29,136
+Pakistan,PAK,AP,28,140
+Mauritania,MRT,SSA,28,140
+Myanmar,MMR,AP,28,140
+Uzbekistan,UZB,ECA,28,140
+Kyrgyzstan,KGZ,ECA,27,144
+Uganda,UGA,SSA,27,144
+Cameroon,CMR,SSA,27,144
+Bangladesh,BGD,AP,26,147
+Madagascar,MDG,SSA,26,147
+Mozambique,MOZ,SSA,26,147
+Guinea,GIN,SSA,25,150
+Guatemala,GTM,AME,25,150
+Iran,IRN,MENA,25,150
+Tajikistan,TJK,ECA,25,150
+Central African Republic,CAF,SSA,24,154
+Lebanon,LBN,MENA,24,154
+Nigeria,NGA,SSA,24,154
+Honduras,HND,AME,23,157
+Zimbabwe,ZWE,SSA,23,157
+Cambodia,KHM,AP,23,157
+Iraq,IRQ,MENA,23,157
+Eritrea,ERI,SSA,22,161
+Republic of Congo,COG,SSA,21,162
+Guinea Bissau,GNB,SSA,21,162
+Nicaragua,NIC,AME,20,164
+Chad,TCD,SSA,20,164
+Comoros,COM,SSA,20,164
+Haiti,HTI,AME,20,164
+Sudan,SDN,SSA,20,164
+Burundi,BDI,SSA,19,169
+Turkmenistan,TKM,ECA,19,169
+Democratic Republic of the Congo,COD,SSA,19,169
+Libya,LBY,MENA,17,172
+Equatorial Guinea,GNQ,SSA,17,172
+Afghanistan,AFG,AP,16,174
+"Korea, North",PRK,AP,16,174
+Yemen,YEM,MENA,16,174
+Venezuela,VEN,AME,14,177
+Syria,SYR,MENA,13,178
+Somalia,SOM,SSA,13,178
+South Sudan,SSD,SSA,11,180
+Brunei Darussalam,BRN,AP,,
