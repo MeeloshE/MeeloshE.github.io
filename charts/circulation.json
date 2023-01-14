@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Google's stock price over time.",
+    "height":300,
+    "width":550,
+    "title": {
+        "text": "Average Total Sterling Notes/Coins in Circulation, Seasonally Adjusted",
+        "subtitle": "Source: Bank of England",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 11,
+        "anchor": "start",
+        "color": "black"
+      },
+    "data": {"url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/cashcirculation.csv"},
+   
+    "mark":{
+        "type": "line",
+        "color":"#FFA500",
+        "strokeWidth":2,
+        "opacity":1},
+    "encoding": {
+      "x": {"field": "Date", "type": "temporal"},
+      "y": {"field": "Monthly Average", "type": "quantitative", "title":"Monthly Average (Sterling Millions)"}
+    }
+  }
+  

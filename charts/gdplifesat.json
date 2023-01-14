@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+     "data": {"url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/satloggdp.csv"},
+  
+    "title": {
+    "text": "GDP Per Capita and Life Satisfaction",
+    "subtitle": ["Heat map of life satisfaction and log GDP per capita in 100+ countries. Source: World Bank, OWID","(2019)"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  
+    "mark": "rect",
+    "width": 300,
+    "height": 300,
+  
+    
+    
+    "encoding": {
+     
+      "x": {
+        "bin": {"maxbins":30},
+        "field": "log_gdp",
+        "type": "quantitative",
+        "scale":{"xyzdomain":[5, 15]},
+        "title":"Log GDP Per Capita"
+      },
+  
+      "y": {
+        "bin": {"maxbins": 25},
+        "field": "lifesat",
+        "type": "quantitative",
+        "scale":{
+          "xyzdomain":[3, 10]
+          
+          },
+        "title":"Life Satisfaction"
+      },
+     
+      "color": {
+        "aggregate": "count",
+        "type": "quantitative",
+        "legend":null
+      }
+  
+    },
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }

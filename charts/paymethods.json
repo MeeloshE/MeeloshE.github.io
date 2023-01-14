@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":300,
+    "width":300,
+    "data": {"url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/brcmelt.csv"},
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "Value", "type": "quantitative", "title":"Share, %"},
+      "color": {"field": "Method", "type": "nominal"}
+    },
+
+    "title": {
+        "text": "Share of Total Sales UK, £",
+        "fontSize":15,
+        "subtitle": "Source: BRC payment survey 2022",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 11,
+        "anchor": "start",
+        "color": "black"
+      }
+   
+      
+  
+  }
+  

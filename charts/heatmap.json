@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 500,
+    "title": {
+      "text": "Mean Populations in English Regions",
+      "subtitle": ["National Electoral Regions"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor": "black"
+    },
+    "params": [
+      {
+        "name": "yearSelector",
+        "value": 2005,
+        "bind": {
+          "input": "range",
+          "min": 2005,
+          "max": 2022,
+          "step": 1,
+          "name": "Year:"
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+    "data": {
+      "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/beepdata.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"calculate": "toNumber(yearSelector)", "as": "yearS"},
+      {"filter": "datum.yearS == datum.Year"},
+      {
+        "lookup": "Region",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/regions.json",
+            "format": {"property": "features"}
+          },
+          "key": "properties.EER13NM",
+          "fields": ["properties", "type", "geometry"]
+        }
+      }
+    ],
+    "encoding": {
+      "color": {
+        "field": "Mean Population",
+        "legend": {"title": null, "orient": "right", "direction": "vertical"},
+        "type": "quantitative",
+        "scale": {"scheme": "yellowgreenblue"}
+      },
+      "tooltip": [
+        {
+          "field": "properties.EER13NM",
+          "type": "nominal",
+          "title": "Region"
+        },
+        {"field": "Mean Population", "title": "Mean Population"}
+      ]
+    }
+  }
+  

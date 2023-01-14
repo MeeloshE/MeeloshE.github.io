@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Bristol Population",
+        "subtitle":"Population of Bristol UK from 1950 to 2022",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+      "description": "A simple bar chart with embedded data.",
+    "data": {
+      "values": [{"Year": "2022", "Population": 701000}, {"Year": "2021", "Population": 694000}, {"Year": "2020", "Population": 686000}, {"Year": "2019", "Population": 679000}, {"Year": "2018", "Population": 671000}, {"Year": "2017", "Population": 663000}, {"Year": "2016", "Population": 656000}, {"Year": "2015", "Population": 648000}, {"Year": "2014", "Population": 641000}, {"Year": "2013", "Population": 634000}, {"Year": "2012", "Population": 626000}, {"Year": "2011", "Population": 619000}, {"Year": "2010", "Population": 612000}, {"Year": "2009", "Population": 605000}, {"Year": "2008", "Population": 598000}, {"Year": "2007", "Population": 591000}, {"Year": "2006", "Population": 585000}, {"Year": "2005", "Population": 578000}, {"Year": "2004", "Population": 571000}, {"Year": "2003", "Population": 565000}, {"Year": "2002", "Population": 559000}, {"Year": "2001", "Population": 552000}, {"Year": "2000", "Population": 549000}, {"Year": "1999", "Population": 546000}, {"Year": "1998", "Population": 543000}, {"Year": "1997", "Population": 541000}, {"Year": "1996", "Population": 538000}, {"Year": "1995", "Population": 535000}, {"Year": "1994", "Population": 533000}, {"Year": "1993", "Population": 530000}, {"Year": "1992", "Population": 528000}, {"Year": "1991", "Population": 525000}, {"Year": "1990", "Population": 524000}, {"Year": "1989", "Population": 524000}, {"Year": "1988", "Population": 524000}, {"Year": "1987", "Population": 524000}, {"Year": "1986", "Population": 524000}, {"Year": "1985", "Population": 524000}, {"Year": "1984", "Population": 524000}, {"Year": "1983", "Population": 524000}, {"Year": "1982", "Population": 524000}, {"Year": "1981", "Population": 524000}, {"Year": "1980", "Population": 528000}, {"Year": "1979", "Population": 533000}, {"Year": "1978", "Population": 538000}, {"Year": "1977", "Population": 544000}, {"Year": "1976", "Population": 549000}, {"Year": "1975", "Population": 554000}, {"Year": "1974", "Population": 559000}, {"Year": "1973", "Population": 565000}, {"Year": "1972", "Population": 570000}, {"Year": "1971", "Population": 576000}, {"Year": "1970", "Population": 578000}, {"Year": "1969", "Population": 579000}, {"Year": "1968", "Population": 581000}, {"Year": "1967", "Population": 582000}, {"Year": "1966", "Population": 584000}, {"Year": "1965", "Population": 586000}, {"Year": "1964", "Population": 587000}, {"Year": "1963", "Population": 589000}, {"Year": "1962", "Population": 590000}, {"Year": "1961", "Population": 592000}, {"Year": "1960", "Population": 589000}, {"Year": "1959", "Population": 585000}, {"Year": "1958", "Population": 580000}, {"Year": "1957", "Population": 576000}, {"Year": "1956", "Population": 572000}, {"Year": "1955", "Population": 568000}, {"Year": "1954", "Population": 564000}, {"Year": "1953", "Population": 560000}, {"Year": "1952", "Population": 556000}, {"Year": "1951", "Population": 552000}, {"Year": "1950", "Population": 549000}]
+      },
+      
+      "height": 300,
+      "width":300,
+
+      "mark":{
+        "type": "line",
+        "color":"#FFA500",
+        "strokeWidth":2,
+        "opacity":1},
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "Population", "type": "quantitative"},
+      "tooltip": [
+        {
+          "field": "Population",
+          "type": "quantitative",
+          "title": "Population"
+        }
+      ]
+    }
+  }
+  

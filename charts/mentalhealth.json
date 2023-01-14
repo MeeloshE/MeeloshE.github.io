@@ -1,0 +1,67 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "title": {
+      "text": "% of population with chronic depression vs deaths",
+      "subtitle":["A look at how access to mental health resources affects mental health", "Source: EuroStat", "(2019)"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+  "config": {
+    "background":"white",
+    "view": {
+      "stroke": "transparent"}},
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/mentalhealthbubble.csv",
+      "format":{"type":"csv"}},
+  
+    "mark": {
+      "type":"circle",
+      "color":"limegreen",
+      "opacity":0.7},
+    
+    "height": 300,
+    "width": 300,
+    "transform":[
+      {"calculate":"datum.TotalDeaths / 100000", "as":"beep"},
+      {"calculate":"datum.Mdeaths / 100000", "as": "meep"},
+      {"calculate":"datum.meep / datum.beep", "as": "moop"},
+      {"calculate": "datum.moop *100", "as":"%deaths"}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "moop", 
+        "type": "quantitative",
+        "scale": {"domain": [0, 0.1]},
+        "axis":{"grid": false, "format":".0%"},
+        "title":"% Of deaths related to mental health disorders per 100,000 deaths"},
+        
+        
+  
+      "y": {
+        "field": "Chrondep", 
+        "type": "quantitative",
+        "scale": {"domain": [0, 20]},
+        "axis":{"grid": false},
+        "title":"% of Population with Chronic Depression"},
+  
+      "size": {
+        "field": "Psychiatrists", 
+        "type": "quantitative",
+        "title":"Prison Rate",
+        "scale": { "range": [0, 800]},
+        "legend":null},
+
+      "tooltip":[
+        {"field":"CountryName", "type": "ordinal", "title":"Country"},
+        {"field":"Psychiatrists", "type": "quantitative", "title":"Psychiatrists Per 100,000 inhabitants", "format":".0f"},
+        {"field":"Chrondep", "type": "quantitative", "title":"Percentage of population reporting chronic depression", "format":".2f"},
+        {"field":"%deaths", "type": "quantitative", "title":"% Deaths due to mental health", "format":".2f"}
+
+      ]
+     }
+  }
