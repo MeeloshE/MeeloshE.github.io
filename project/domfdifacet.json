@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+             
+    "title": {
+            "text": "Domestic and Foreign Direct Investment as percentage of GDP",
+            "subtitle":["5 Clean and 5 Corrupt Countries","Source: World Bank, The Global Economy, (Latest Values)"],
+            "subtitleFontStyle":"italic",
+            "subtitleFontSize":10,
+            "anchor": "start",
+            "color": "black"},
+            
+    "data": {
+            "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/valueoutcomes.csv"},
+    
+   "transform": [
+     {"filter": {"field": "group", "oneOf": ["dominvest", "fdigdp2021"]}},
+     {
+        "calculate": "datum.value / 100",
+        "as": "pvalue"
+    }
+   ],
+            
+        "height": 200,
+        "width": 271,   
+    
+        "mark": {   
+                "type":"bar",
+                "color":"rgb(0,47,167)",
+                "point":true,
+                "strokeWidth":1},    
+        
+        "encoding": {
+                "x": {
+                    "field": "country",
+                    "sort":{},
+                    "type": "nominal",
+                    "title":null,
+                    "axis":{"grid": false}},
+        
+                "y": {
+                    "field": "pvalue",
+                    "type": "quantitative",
+                    "title": null,
+                    "axis":{"title":"", "format":".0%"}},
+                
+                
+                 "color": {
+                    "field": "group",
+                    "type": "nominal",
+                    "scale": {"range": ["skyblue", "orange"]}, "legend":null
+                           },
+                    
+    
+                "facet": {
+                    "field": "group",
+                    "columns": 2,
+                    "type": "nominal",
+                    "title": ""}
+                         },
+    "resolve": {"scale": {"y": "independent"}}
+    }

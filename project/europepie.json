@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with embedded data.",
+     "title": {
+              "text": "Corruption Perception of Ten European Countries",
+              "subtitle":["Ten countries in Europe, five cleaner and five more corrupt, 100 = Clean","Source: Transparant International (2021)"],
+              "subtitleFontStyle":"italic",
+              "subtitleFontSize":10,
+              "anchor": "start",
+              "color": "black"},
+              
+    "data": {
+      "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/CPI.csv"
+    },
+    "height":250,
+    "width":250,
+    "transform": [
+      {"filter":{"field":"country", "oneOf":["Denmark", "Finland", "Norway", "Sweden", "United Kingdom", "Greece", "Bulgaria", "Turkey", "Ukraine", "Russia"]}}
+    ],
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "CPI", "type": "quantitative"},
+      "color": {"field": "country", "type": "nominal", "sort":{}, "scale":{"scheme":"category10"}, "legend":{"title":"Country", "orient": "right", "direction": "vertical"}},
+      "tooltip":[{
+        "field": "country",
+        "type": "nominal",
+        "title": "Country"},
+        {"field":"CPI", "type": "quantitative", "title": "Corruption Perception"}
+        ]
+    }
+    
+  }
+  

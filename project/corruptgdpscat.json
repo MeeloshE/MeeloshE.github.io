@@ -1,0 +1,89 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  
+
+  "title": {
+    "text": ["Corruption and GDP Per Capita (2021)"],
+    "subtitle":["100 = Clean, 0 = Very Corrupt","Source: World Bank, Transparancy International"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/cpiloggdp.csv"
+    },
+
+"transform": [
+    {"filter":"datum.log_gdp>0"},
+    {"filter":"datum.cpi>0"}
+
+],
+   
+  "height": 300,
+  "width": 300,
+
+"layer":[{
+
+  "mark": {
+    "type":"point",
+    "color":"#FF0000"
+    },
+ 
+
+  "encoding": {
+    "x": {
+      "field": "log_gdp", 
+      "type": "quantitative",
+      "scale":{"domain":[5,12]},
+      "axis":{"title":"Log GDP Per Capita", "grid": false}
+      },
+
+    "y": {
+      "field": "cpi", 
+      "type": "quantitative",
+      "axis":{"title":"Corruption Perception Index", "grid": false}
+      },
+      
+    "tooltip":[{
+        "field": "country",
+        "type": "ordinal",
+        "title": "Country"
+    }]
+  }},
+
+    {
+      "mark": {"type": "line", "color": "black"},
+
+      "transform": [{"regression": "log_gdp", "on": "cpi"}],
+         
+      "encoding": {
+        "x": {"field": "log_gdp", "type": "quantitative"},
+        "y": {"field": "cpi", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "log_gdp",
+          "on": "cpi",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+    
+]
+
+}

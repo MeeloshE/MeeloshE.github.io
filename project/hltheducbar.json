@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "title": {
+    "text": ["Government Spending on Healthcare and Education as a percentage of GDP"],
+    "subtitle":["5 Clean and 5 Corrupt Countries","Source: World Bank (Latest Values)"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/valueoutcomes.csv"
+  },
+  "transform": [
+    {"filter": {"field": "group", "oneOf": ["hcgdp2019", "educgdp2020"]}},
+    {
+        "calculate": "datum.valuehc / 100",
+        "as": "hc"
+    },
+    {
+        "calculate": "datum.valueeduc / 100",
+        "as": "educ"
+    }
+  ],
+  "encoding": {
+    "x": {"field": "country", "sort":{},"type": "nominal", "axis": {"labelAngle": 0}, "title":["Country","<- Cleaner | Corrupt ->"]}
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "xOffset": -11, "size": 20, "color": "skyblue"},
+      "encoding": {
+        "y": {
+          "field": "hc",
+          "type": "quantitative",
+          "axis": {"title": null, "ticks": false, "format":".0%"}
+
+        }
+      }
+    },
+    {
+      "mark": {"type": "bar", "size": 20, "xOffset": 11, "color": "orange"},
+      "encoding": {
+        "y": {
+          "field": "educ",
+          "type": "quantitative",
+          "axis": {"title": null, "ticks": false, "format":".0%"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "text"},
+      "encoding": {
+        "fill": {
+          "field": "legendTitle",
+          "scale": {"range": ["orange", "skyBlue"]},
+          "legend": {"title": null, "symbolType": "square", "orient": "bottom"}
+        }
+      }
+    }
+  ]
+}

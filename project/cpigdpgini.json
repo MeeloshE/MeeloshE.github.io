@@ -1,0 +1,63 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "title": {
+      "text": "GDP and CPI with Economic Inequality",
+      "subtitle":["A look at the relationship between corruption and GDP per capita and economic inequality", "Sources: Transparent International (2021), World Bank (GDP 2021, Gini 2017)"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+  "config": {
+    "background":"white",
+    "view": {
+      "stroke": "transparent"}},
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/MeeloshE/MeeloshE.github.io/main/worldginicpigdp.csv",
+      "format":{"type":"csv"}},
+  
+    "mark": {
+      "type":"circle",
+      "opacity":0.7},
+    
+    "height": 300,
+    "width": 300,
+    
+    "transform": [{
+      "bin":true, "field": "gini", "as":"ginibin"
+    }],
+
+  
+    "encoding": {
+      "x": {
+        "field": "log_gdp", 
+        "type": "quantitative",
+        "scale": {"domain": [5, 12]},
+        "axis":{"grid": false},
+        "title":"Log GDP Per Capita"},
+        
+        
+  
+      "y": {
+        "field": "cpi", 
+        "type": "quantitative",
+        "scale": {"dxyzomain": [15, 50]},
+        "axis":{"grid": false},
+        "title":"Corruption Perception Index"},
+  
+      "size": {
+        "bin":{"maxbins": 4}, "field":"gini", "legend":null, "scale":{"range":[0,600]}
+        },
+      "color":{"bin":{"maxbins": 4}, "field":"gini", "scale":{"scheme":"yellowgreenblue"}, "legend":{"title":"Gini"}},
+
+      "tooltip":[
+        {"field":"country", "type": "ordinal", "title":"Country"},
+        {"field":"gini", "type": "quantitative", "title":"Psychiatrists Per 100,000 inhabitants", "format":".0f"},
+        {"field":"Chrondep", "type": "quantitative", "title":"Percentage of population reporting chronic depression", "format":".2f"},
+        {"field":"%deaths", "type": "quantitative", "title":"% Deaths due to mental health", "format":".2f"}
+
+      ]
+     }
+  }
