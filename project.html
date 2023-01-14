@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>DataScience | Project</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="project.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+
+<body>
+
+
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li> <!--List Items (can only be used in ol (ordered list) or ul)-->
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="project.html">PROJECT</a></li>
+            </ul>
+        </nav>
+        <h1 class="name name-large">DataScience Project</h1>
+       </header>
+    <h1 class="title">Looking at the economic consequences of corruption</h1>
+    <section class="charts">
+        <div class="align">
+            <h1 class="Week">Aims:</h1>
+        </div>
+        <div class="align">
+            <p class="aims"> <br>In this project 
+            I aimed to examine the relationship between modern corruption and economic development. While the nature of 
+            corruption makes it very difficult to analyse, I wanted to look at 
+            how countries with different levels of corruption were growing and spending. I also aimed to briefly look at 
+            channels of preventing/ reducing corruption.
+
+            As I wanted the study to reflect the current day, in many cases I used the most recent data available. <br>
+            <br>
+                </p>
+        </div>
+    </section>
+
+    <section class="charts">
+        <div class="align">
+            <h1 class="Week">Figure 1/ Figure 2</h1>
+        </div>
+        <div class="align">  
+            <div class="maps" id="worldgdpmap"></div>
+            <div class="maps" id="corruptmap"></div>
+        </div>
+        <div class="align">
+            <p>
+                Figure one shows the world distribution of GDP Per Capita.
+             Figure two does the same for Corruption, measured using Transparancy 
+              International's Corruption Perception Index (CPI). <br> 
+            <br>Data was cleaned in Stata and the template for the world map was sourced from Natural Earth.
+         </p>
+        </div>
+    </section>
+    <section class="charts">
+        <h1 class="Week">Figure 3</h1>
+        <div class="align">
+            <div class="scatter" id="corruptgdpscat"></div>
+        </div>
+        <div class="align">
+            <p>
+                Before continuing with the consequences of corruption I used vegalite to add a regression and R squared
+                value to show a positive correlation between corruption and log GDP Per Capita <a href="https://colab.research.google.com/drive/1aFUGtD0_CthyWFE3QkwPC9qUThhNqO3O" 
+                target="_blank">(Colab)</a> , which i'm using as my indicator
+                for economic development. This could have also been done in Python but I found it easier to embed it in the 
+                visualisation itself.
+            </p>
+        </div>
+    </section>
+    <section class="charts">
+        <h1 class="Week">Figure 4</h1>
+        <div class="align">
+            <div class="cpigdpgini" id="cpigdpgini"></div>
+        </div>
+    </section>
+    <section class="charts">
+        <p>
+            This visualisation adds a third dimension, economic inequality. We can see from the sizes and colours of the bubbles, 
+            countries with higher levels of corruption tend to have a higher degree of economic inquality. However, there 
+            are still some countries with low percieved corruption and high inequality. 
+
+
+        </p>
+        <h1 class="Week">Figure 5</h1>
+        <div class="align">
+            <div class="europepie" id="europepie"></div>
+        </div>
+        <p>
+            Henceforth, I examine the economic consequences of corruption in ten European countries, five or which are percieved as corrupt,
+            and five clean. The countries are listed in order of corruption perception.
+        </p>
+        <h1 class="Week">Figure 6/7</h1>
+        <div class="align">
+            <div class="hltheducbar" id="hltheducbar"></div>
+        </div>
+        <div class="align">
+            <div class="domfdifacet" id="domfdifacet"></div>
+        </div>
+        <p>
+            To look at the consequences of corruption I selected expenditure on healthcare and education,
+             also, domestic and foreign investment as percentages of GDP. Figure 6 shows what was expected, corrupt countries spend 
+             less on healthcare and education. However, Figure 7 was surprising as I expected corrupt countries to have 
+             a lot less domestic and foreign investment but there was no clear difference. Data from the World Bank was used, which I cleaned extensively 
+             and merged with other datasets. For Domestic Investment I used a <a href="https://colab.research.google.com/drive/1zWSGi2cXHEYuj7ZL2z4sfycLPPgA8Ttn" 
+             target="_blank">scraper</a> to take data from The Global Economy.
+        </p>
+    </section>
+    <section class="charts">
+        <h1 class="Week">Figure 8</h1>
+        <div class="align">
+            <div class="voice" id="voice"></div>
+        </div>
+        <p>For the last visualisation I wanted to review transparancy in fighting corruption. 
+            I used the voice and accountability indicator. It is clear that more politcally transparant countries are a lot less corrupt.
+        </p>
+
+    </section>
+    <section class="chal">
+        <h1 class="Week">Challenges:</h1>
+        <div class="challenges parent">
+        <p>
+            Initially, a problem was combining datasets which had different names for
+             the same Country, this was overcome with either Stata or Python. I preferred 
+             Stata because of the _merge variable. I used Python whenever I had a formatting problem
+              as pandas made it easy to change datasets into long format using ‘melt’. This could 
+              also have been done within VegaLite using ‘fold’ in ‘transform’. Another problem was the World
+               Bank API. I began the project using the API as I wanted to include more automation, 
+               but unfortunately I found the API was limited, as it was incapable of containing all 
+               the data I needed. The API only contained countries up to the letter ‘C’ and no further. 
+               I could have used loops bit this method would lose its efficiency. 
+               Ultimately I decided to use CSVs as there were no other relevant APIs. I also 
+               found that CPI was the most well rounded corruption index, but due to its sourcing it was not 
+               suitable for time series or comparison, so while I initially wanted to show
+                how corruption had evolved, I felt it would have been misleading and decided to use the latest
+                 data. Lastly, I used a trick to scrape the data for domestic investment after receiving 
+                 errors the usual way.
+        </p>
+    </div>
+    </section>
+    <section class="chal">
+        <h1 class="Week">Conclusions:</h1>
+        <div class="conclusion">
+            <p>
+                There is a positive correlation between Log GDP Per Capita and how clean a country is.
+                 With this established it is fair to analyse what corruption does to slow economic development. 
+                 Spending did appear to be diverted away from healthcare and education in countries with higher 
+                 levels of corruption. The effect on domestic and foreign investment was unclear, which was not 
+                 expected. It also seems that political transparency is an effective way to combat corruption.
+                  It is important to note that the nature of corruption makes interpreting the data dubious. 
+                  Furthermore, results should not be mistaken for causal relationships, it is unclear 
+                  whether corruption is causing slow development or vice versa. There is a need for further study 
+                  and data collection as in the age of information, corruption is harder to detect than ever and 
+                  there is a lack of data. For example, I had wanted to include more channels of combating corruption
+                   such as relative public sector wages and hiring processes, but it is difficult to find any data.
+            </p>
+        </div>
+        
+    </section>
+    <section class="chal">
+        <h3 class="Week">References</h3>
+        <div>
+            <p>
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/prc_rem_cs/default/table?lang=en" target="_blank">https://ec.europa.eu/eurostat/databrowser/view/prc_rem_cs/default/table?lang=en</a> (Accessed: January 14, 2023). <br>
+2021 corruption perceptions index - explore the results (no date) Transparency.org. Available at: <a href="https://www.transparency.org/en/cpi/2021" target="_blank">https://www.transparency.org/en/cpi/2021</a> (Accessed: January 14, 2023). <br>
+Investment as percent of GDP around the world (no date) TheGlobalEconomy.com. Available at: <a href="https://www.theglobaleconomy.com/rankings/investment_percent_of_gdp/" target="_blank">https://www.theglobaleconomy.com/rankings/investment_percent_of_gdp/</a> (Accessed: January 14, 2023). <br>
+Worldwide governance indicators (no date) DataBank. Available at: <a href="https://databank.worldbank.org/source/worldwide-governance-indicators#" target="_blank">https://databank.worldbank.org/source/worldwide-governance-indicators#</a> (Accessed: January 14, 2023). 
+            </p>
+        </div>
+    </section>
+</body>
+
+
+<script>
+    //Define charts:
+    var worldgdpmap = "project/worldgdpmap.json";
+    var corruptmap = "project/corruptmap.json";
+    var corruptgdpscat = "project/corruptgdpscat.json";
+    var cpigdpgini = "project/cpigdpgini.json";
+    var hltheducbar = "project/hltheducbar.json";
+    var domfdifacet = "project/domfdifacet.json";
+    var europepie = "project/europepie.json";
+    var voice = "project/voice.json";
+  
+
+    
+
+    // Embed charts:
+    vegaEmbed('#worldgdpmap', worldgdpmap);
+    vegaEmbed('#corruptmap', corruptmap);
+    vegaEmbed('#corruptgdpscat', corruptgdpscat);
+    vegaEmbed('#cpigdpgini', cpigdpgini);
+    vegaEmbed('#hltheducbar', hltheducbar);
+    vegaEmbed('#domfdifacet', domfdifacet);
+    vegaEmbed('#europepie', europepie);
+    vegaEmbed('#voice', voice);
+</script>
+
+<footer class="portfolio-footer">
+    <div class="container portfolio-footer-container">
+    <h3 class="Links">Links</h3>
+    <ul class="nav footer-nav">
+        <li>
+            <a href="https://www.instagram.com/economicsobservatory" target="_blank">
+                <img src="images/insta.png" width="50" height="">
+            </a>
+        </li>
+    </ul>
+    </div>
+</footer>
+</html>

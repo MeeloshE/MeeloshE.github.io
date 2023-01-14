@@ -1,0 +1,283 @@
+/* Richard Davies, Data Science for Economists */
+
+/* This is my second CSS file */
+
+
+/* Import a font */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&family=Pacifico&family=Source+Sans+Pro&display=swap');
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url()  ;  /* fonts that i dont have */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    color: #264143;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: #eddcd9;
+
+}
+
+.charts {
+    margin: auto;
+    max-width: 600px;
+    background-color: #eddcd9;
+
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #264143;
+}
+
+.nav ul {
+    margin:0;
+    padding:0;
+}
+.nav li {
+    display: inline;
+}
+.main-nav {
+    text-align: center;
+    font-size: 2em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(13, 12, 12, 0.7);
+
+}
+.main-nav li {
+    padding: 0 5%;
+    
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: #264143;
+    text-decoration: none;
+}
+.nav a:hover {
+    background-color: rgba(114, 111, 111, 0.3);
+}
+.main-header {
+    background-color: #f2ebe9;
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+    font-size: 0.5em;
+    border-bottom: 1px solid #264143;
+    
+}
+.name {
+    text-align: center;
+    margin:0;
+    font-size: 4em;
+    font-family: 'Oswald';
+    /*font-family:*/ 
+    font-weight: normal;
+    color: #264143;
+    
+
+}
+.name-large {
+    font-size: 8em;
+}
+
+
+
+.chart{
+    background-color: white;
+    width:450px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: grey;
+    display: flex;
+    justify-content: center;
+    margin: center;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    margin: center;
+}
+
+.Week {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.maps {
+    background-color: white;
+    width:725px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.scatter {
+    background-color: white;
+    width:410px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.cpigdpgini {
+    background-color: white;
+    width:450px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.hltheducbar {
+    background-color: white;
+    width:700px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.domfdifacet {
+    background-color: white;
+    width:700px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.europepie {
+    background-color: white;
+    width:375px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.voice {
+    background-color: white;
+    width:570px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.aims {
+    color: #264143;
+    background-color: #f2ebe9;
+    width:570px;
+    margin:0 auto;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.challenges {
+    color: #264143;
+    background-color: #f2ebe9;
+    width:800px;
+    margin:0 auto;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+.conclusion {
+    color: #264143;
+    background-color: #f2ebe9;
+    width:700px;
+    margin:0 auto;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
+
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .chal {
+    margin: auto;
+    max-width: 800px;
+    background-color: #eddcd9;
+
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #264143;
+}
+ 
+
+.title {
+    text-align: center;
+    text-decoration-line: underline;
+    font-weight: bolder;
+}
+
+
+
+
+.portfolio-footer {
+    background-color: #264143;
+    color: white;
+    padding: .25em 0;
+    margin: 50px; /* first number is top and bottom second is left and right */
+
+}
+.portfolio-footer-container {
+    display: flex;
+    align-items: center;
+}
+.portfolio-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+
+}
+.footer-nav li {
+    padding: 0 .5em;
+}
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+.Links {
+    margin-left: 20px;
+    font-size: 2em;
+    text-align: auto;
+    /*font-family:*/
+    color: #f2ebe9;
+    font-weight: lighter;
+}
