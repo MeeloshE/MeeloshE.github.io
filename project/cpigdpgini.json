@@ -54,9 +54,8 @@
 
       "tooltip":[
         {"field":"country", "type": "ordinal", "title":"Country"},
-        {"field":"gini", "type": "quantitative", "title":"Psychiatrists Per 100,000 inhabitants", "format":".0f"},
-        {"field":"Chrondep", "type": "quantitative", "title":"Percentage of population reporting chronic depression", "format":".2f"},
-        {"field":"%deaths", "type": "quantitative", "title":"% Deaths due to mental health", "format":".2f"}
+        {"field":"gini", "type": "quantitative", "title":"Gini Coefficient", "format":".0f"},
+        {"field":"cpi", "type": "quantitative", "title":"Corruption Perception Index", "format":".2f"}
 
       ]
      }
