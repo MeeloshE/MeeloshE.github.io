@@ -155,7 +155,15 @@ html, body {
     text-align: center;
 }
 
-
+.ds {
+    background-color: white;
+    width:500px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #264143;
+    text-align: center;
+}
 
 
 
